@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=auto">
 <title>Naveen weds Sravya · Groom's Invitation</title>
 <meta name="description" content="The Yadla family invites you to the wedding of Naveen and Sravya on Thursday, 3 December 2026 at 8:59 PM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +27,9 @@
   --f-text:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
   --sy:0;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{background:var(--night);color:var(--ivory);font-family:var(--f-text);font-size:19px;line-height:1.45;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;margin:0;padding:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;font-size:clamp(13.5px,calc(11.6px + 1.12vw),21px)}
+body{background:var(--night);color:var(--ivory);font-family:var(--f-text);font-size:1.19rem;line-height:1.45;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body.locked{overflow:hidden}
 a{color:inherit}button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--gold-hi);outline-offset:4px;border-radius:6px}
@@ -41,7 +41,7 @@ a{color:inherit}button{font:inherit;color:inherit}
     radial-gradient(120% 70% at 50% 108%,var(--ember),transparent 62%),
     linear-gradient(180deg,var(--night),var(--wine) 55%,#1b060b)}
 #bokeh{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-#grain{position:fixed;inset:0;z-index:3;pointer-events:none;background:var(--grain);opacity:.55;mix-blend-mode:overlay}
+#grain{position:fixed;inset:0;z-index:3;pointer-events:none;background:var(--grain);opacity:.4}
 #vig{position:fixed;inset:0;z-index:3;pointer-events:none;background:radial-gradient(120% 90% at 50% 45%,transparent 52%,rgba(0,0,0,.72))}
 #fx{position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none}
 #bar{position:fixed;top:0;left:0;right:0;height:2px;z-index:40;background:var(--foil);transform-origin:left center;transform:scaleX(0)}
@@ -55,7 +55,8 @@ a{color:inherit}button{font:inherit;color:inherit}
 /* ---------- type ---------- */
 .cap{font-family:var(--f-title);font-size:.62rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);line-height:1.8;padding-left:.42em;text-wrap:balance}
 .foil{background:var(--foil);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
-  animation:sheen 6s ease-in-out infinite alternate;filter:drop-shadow(0 0 16px rgba(227,181,101,.32))}
+  animation:sheen 6s ease-in-out infinite alternate}
+.a.foil{filter:none}
 @keyframes sheen{from{background-position:0 0}to{background-position:100% 0}}
 .title{font-family:var(--f-title);font-weight:500;font-size:clamp(1.55rem,7.4vw,2.2rem);letter-spacing:.16em;text-transform:uppercase;line-height:1.25;padding-left:.16em;text-wrap:balance}
 .it{font-style:italic}
@@ -68,9 +69,9 @@ a{color:inherit}button{font:inherit;color:inherit}
 
 /* ---------- scenes ---------- */
 main{position:relative;z-index:2}
-.sc{position:relative;width:100%;max-width:460px;margin:0 auto;padding:38px 30px;
+.sc{position:relative;width:100%;max-width:29rem;margin:0 auto;padding:2.4rem 1.9rem;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center}
-#top{min-height:100vh;min-height:100svh;padding-top:72px;padding-bottom:72px;gap:16px}
+#top{min-height:100vh;min-height:100svh;padding-top:4.5rem;padding-bottom:4.5rem;gap:1rem}
 #verse{padding-top:54px;padding-bottom:54px}
 .a{opacity:0;transform:translateY(26px);filter:blur(7px);transition:opacity 1.2s ease,transform 1.4s cubic-bezier(.2,.7,.2,1),filter 1.2s ease;transition-delay:calc(var(--i,0) * .16s)}
 .sc.on .a{opacity:1;transform:none;filter:none}
@@ -81,8 +82,8 @@ main{position:relative;z-index:2}
 /* ---------- opening ---------- */
 #gate{position:fixed;inset:0;z-index:50;background:radial-gradient(60% 42% at 50% 46%,#3a0d16,#0a0305 72%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
   transition:opacity 1.6s ease .5s,visibility 0s 2.2s}
-#gate .logo{width:min(64vw,250px)}
-.logo{display:block;aspect-ratio:464/266;background:var(--foil);background-size:200% 100%;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;
+#gate .logo{width:min(64vw,250px);height:calc(min(64vw,250px) * .5733)}
+.logo{display:block;background:var(--foil);background-size:200% 100%;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;
   animation:sheen 5s ease-in-out infinite alternate}
 .glowwrap{filter:drop-shadow(0 0 22px rgba(227,181,101,.5));animation:breathe 3.4s ease-in-out infinite alternate}
 @keyframes breathe{from{transform:scale(1);filter:drop-shadow(0 0 14px rgba(227,181,101,.35))}to{transform:scale(1.035);filter:drop-shadow(0 0 30px rgba(227,181,101,.7))}}
@@ -97,16 +98,18 @@ main{position:relative;z-index:2}
 #openBtn{position:absolute;inset:0;width:100%;height:100%;background:none;border:0;cursor:pointer}
 
 /* ---------- 1. title ---------- */
-.inv{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;width:100%;font-family:"Noto Serif Telugu","Noto Sans Telugu",serif;font-weight:600;font-size:1rem;color:var(--gold-hi);position:absolute;top:26px;left:0;padding:0 44px}
+.inv{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;width:100%;max-width:26rem;margin:0 auto;right:0;font-family:"Noto Serif Telugu","Noto Sans Telugu",serif;font-weight:600;font-size:1rem;color:var(--gold-hi);position:absolute;top:1.6rem;left:0;padding:0 2.6rem}
 .inv span:first-child{text-align:left}.inv span:last-child{text-align:right}
 .inv span{animation:invglow 4.5s ease-in-out infinite}
 .inv span:nth-child(2){animation-delay:1.5s}.inv span:nth-child(3){animation-delay:3s}
 @keyframes invglow{0%,60%,100%{text-shadow:0 0 0 transparent}30%{text-shadow:0 0 16px rgba(248,227,166,.95)}}
 .name{font-family:var(--f-title);font-weight:500;font-size:clamp(2.7rem,14vw,4.1rem);letter-spacing:.1em;line-height:1.05;padding-left:.1em;display:block}
-.name span{display:inline-block;opacity:0;transform:translateY(.5em) rotateX(70deg);filter:blur(8px);transition:opacity 1s,transform 1.2s cubic-bezier(.2,.8,.2,1),filter 1s;transition-delay:calc(var(--d) * 1s)}
-.sc.on .name span{opacity:1;transform:none;filter:none}
+.name span{display:inline-block;opacity:0;transform:translateY(.45em);transition:opacity 1s,transform 1.2s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d) * 1s)}
+.sc.on .name span{opacity:1;transform:none}
 .name-foil{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.names{filter:drop-shadow(0 0 22px rgba(227,181,101,.4));perspective:600px}
+.names{position:relative}
+.names::before{content:"";position:absolute;left:50%;top:50%;width:100%;height:100%;transform:translate(-50%,-50%);pointer-events:none;background:radial-gradient(closest-side,rgba(227,181,101,.2),transparent)}
+.names > *{position:relative}
 .with{font-style:italic;font-size:1.35rem;color:var(--gold);line-height:1.6;display:block}
 .date-line{font-family:var(--f-title);font-size:.95rem;letter-spacing:.34em;padding-left:.34em;color:var(--ivory)}
 .line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-hi),transparent);transition:width 1.8s 1.6s ease}
@@ -142,6 +145,8 @@ main{position:relative;z-index:2}
 .muh{display:none;flex-direction:column;align-items:center;gap:10px}
 .muh.show{display:flex}
 .muh > *{animation:focus 1.4s both}
+.muh > .foil{animation-name:focus2}
+@keyframes focus2{from{opacity:0;transform:translateY(18px) scale(1.06)}to{opacity:1;transform:none}}
 .muh > :nth-child(2){animation-delay:.25s}.muh > :nth-child(3){animation-delay:.5s}.muh > :nth-child(4){animation-delay:.75s}.muh > :nth-child(5){animation-delay:1.1s}.muh > :nth-child(6){animation-delay:1.4s}
 @keyframes focus{from{opacity:0;transform:translateY(18px) scale(1.06);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
 .big-date{font-family:var(--f-title);font-weight:500;font-size:clamp(2.5rem,13vw,3.6rem);letter-spacing:.08em;line-height:1.05;font-variant-numeric:lining-nums}
@@ -156,7 +161,7 @@ main{position:relative;z-index:2}
 @keyframes tick{from{transform:translateY(-6px);opacity:.4}to{transform:none;opacity:1}}
 
 /* ---------- 5. celebrations: glass slides in a native sideways scroller ---------- */
-.fn{align-self:stretch;margin:0 -30px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 11% 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.fn{align-self:stretch;margin:0 -1.9rem;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 11% 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .fn::-webkit-scrollbar{display:none}
 .slide{flex:0 0 100%;min-width:0;scroll-snap-align:center;text-align:left;border-radius:22px;padding:30px 26px 28px;position:relative;overflow:hidden;
   background:linear-gradient(160deg,rgba(248,227,166,.16),rgba(90,20,32,.38) 45%,rgba(13,4,7,.55));
@@ -199,7 +204,7 @@ main{position:relative;z-index:2}
 
 /* ---------- 7. closing ---------- */
 .sc.end{gap:14px;padding-bottom:56px}
-.sc.end .logo{width:190px}
+.sc.end .logo{width:190px;height:109px}
 .who{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:1.1rem;line-height:1.35}
 .who .cap{margin-bottom:4px;font-weight:400}
 .tel{font-family:var(--f-title);font-size:1.02rem;letter-spacing:.14em;color:var(--gold-hi);text-decoration:none;font-variant-numeric:lining-nums}
@@ -219,7 +224,8 @@ main{position:relative;z-index:2}
   box-shadow:0 8px 20px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;max-width:calc(100% - 32px);text-align:center}
 #toast.on{opacity:1;transform:translate(-50%,0)}
 
-@media (max-width:360px){.sc{padding-left:22px;padding-right:22px}.fn{margin:0 -22px}.inv{padding:0 36px;font-size:.92rem}.slide{padding:26px 20px 24px}.slide .num{font-size:3.6rem}.slide .when{gap:10px}.slide .when > div .cap{letter-spacing:.1em;font-size:.56rem}.strand.b,.strand.d{display:none}.cap{letter-spacing:.32em}}
+@media (max-height:560px){#top{padding-top:3.4rem;padding-bottom:3rem}.down{display:none}.strand{display:none}}
+@media (max-width:360px){.inv{padding:0 2.2rem;font-size:.92rem}.slide{padding:26px 20px 24px}.slide .num{font-size:3.6rem}.slide .when{gap:10px}.slide .when > div .cap{letter-spacing:.1em;font-size:.56rem}.strand.b,.strand.d{display:none}.cap{letter-spacing:.32em}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}
   html{scroll-behavior:auto}
@@ -456,12 +462,19 @@ main{position:relative;z-index:2}
     setTimeout(function(){ document.body.classList.remove('locked'); $('top').classList.add('on'); }, reduce ? 0 : 900); });
 
   /* ---- music: starts on the opening tap, fades in, and can be muted ---- */
-  var song = $('song'), snd = $('snd'), muted = false, fadeT;
-  function fadeTo(v){ clearInterval(fadeT); fadeT = setInterval(function(){ var d = v - song.volume; if (Math.abs(d) < .03){ song.volume = v; clearInterval(fadeT); if (v === 0) song.pause(); } else song.volume = Math.max(0, Math.min(1, song.volume + (d > 0 ? .03 : -.05))); }, 80); }
-  function startMusic(){ snd.classList.add('show'); try { song.volume = 0; var p = song.play(); if (p && p.then) p.then(function(){ fadeTo(.7); }, function(){ setMuted(true); }); else fadeTo(.7); } catch (e) { setMuted(true); } }
-  function setMuted(m){ muted = m; snd.setAttribute('aria-pressed', m ? 'true' : 'false'); snd.setAttribute('aria-label', m ? 'Play the music' : 'Mute the music'); }
-  snd.addEventListener('click', function(){ if (muted){ setMuted(false); try { var p = song.play(); if (p && p.catch) p.catch(function(){ setMuted(true); }); } catch (e) {} fadeTo(.7); } else { setMuted(true); fadeTo(0); } });
-  document.addEventListener('visibilitychange', function(){ if (document.hidden) song.pause(); else if (opened && !muted) { try { var p = song.play(); if (p && p.catch) p.catch(function(){}); } catch (e) {} } });
+  var song = $('song'), snd = $('snd'), muted = false, fadeT, canVol = false;
+  try { song.volume = .5; canVol = song.volume === .5; song.volume = 1; } catch (e) {}
+  function fadeTo(v, done){ clearInterval(fadeT);
+    if (!canVol){ if (done) done(); return; }
+    fadeT = setInterval(function(){ var d = v - song.volume; if (Math.abs(d) < .05){ song.volume = v; clearInterval(fadeT); if (done) done(); } else song.volume = Math.max(0, Math.min(1, song.volume + (d > 0 ? .04 : -.07))); }, 70); }
+  function setBtn(m){ muted = m; snd.setAttribute('aria-pressed', m ? 'true' : 'false'); snd.setAttribute('aria-label', m ? 'Play the music' : 'Mute the music'); }
+  function playSong(){ clearInterval(fadeT); song.muted = false; if (canVol) song.volume = 0;
+    var p; try { p = song.play(); } catch (e) { setBtn(true); return; }
+    if (p && p.then) p.then(function(){ setBtn(false); fadeTo(.7); }, function(){ setBtn(true); }); else { setBtn(false); fadeTo(.7); } }
+  function stopSong(){ setBtn(true); fadeTo(0, function(){ song.pause(); }); if (!canVol) song.pause(); }
+  function startMusic(){ snd.classList.add('show'); playSong(); }
+  snd.addEventListener('click', function(e){ e.preventDefault(); if (muted || song.paused) playSong(); else stopSong(); });
+  document.addEventListener('visibilitychange', function(){ if (document.hidden){ clearInterval(fadeT); song.pause(); } else if (opened && !muted) playSong(); });
 
   /* ---- scenes pull into focus as they arrive ---- */
   var scenes = document.querySelectorAll('.sc:not(#top)');
